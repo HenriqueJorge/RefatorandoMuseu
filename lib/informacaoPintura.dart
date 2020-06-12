@@ -3,28 +3,29 @@ import 'package:flutter/cupertino.dart';
 import 'busca.dart';
 import 'homeScreen.dart';
 
+
 class InformaPintura extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFF2196F3),
-      body: Center(
+      backgroundColor: Color(0xDD00bed8),
+       body: Container(height: 1000,decoration: new BoxDecoration(image: new DecorationImage(image: AssetImage('asserts/fundoOf.jpg'), fit: BoxFit.cover),),child:Center(
         child: Container(
           child: ImagemPintura(),
           height: 500,
         ),
-      ),
+      ),),
       bottomNavigationBar:
         Container(child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
         FlatButton(
-          child: Icon(Icons.home, color: Color(0XDD000000), size: 50.0),
-          onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Init()));},
+          child: Icon(Icons.home, color: Color(0XDD000000), size: 65.0),
+          onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));},
         ),
         MyButton(),
         FlatButton(
-          child: Icon(Icons.close, color: Color(0XDD000000), size: 50.0),
-          onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Init()));},
+          child: Icon(Icons.close, color: Color(0XDD000000), size: 65.0),
+          onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));},
         ),
       ]),height:100,
     ),);
@@ -66,8 +67,8 @@ class MyButton extends StatelessWidget {
           color: Color(0XDD000000),
           shape: CircleBorder(),
           onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => Buscar()))},
-          child: Icon(Icons.search, color: Color(0XFFFFFFFF), size: 50.0),
+          child: Icon(Icons.search, color: Color(0XFFFFFFFF), size: 60.0),
         ),
-        height: 70);
+        height: 90);
   }
 }

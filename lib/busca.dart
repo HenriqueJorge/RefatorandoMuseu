@@ -7,7 +7,7 @@ class Buscar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0XFF2196F3),
-      body: Center(
+      body: Container(height: 1000,decoration: new BoxDecoration(image: new DecorationImage(image: AssetImage('asserts/fundoOf.jpg'), fit: BoxFit.cover)),child:Center(
         child: Container(
           child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -16,7 +16,7 @@ class Buscar extends StatelessWidget {
           ]),
         height: 300,),
       ),
-    );
+    ),);
   }
 }
 

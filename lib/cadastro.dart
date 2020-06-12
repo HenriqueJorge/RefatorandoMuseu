@@ -8,7 +8,7 @@ class RegistrationScreen extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Scaffold(
-          body: SingleChildScrollView(
+          body: Container(height: 1000,decoration: new BoxDecoration(image: new DecorationImage(image: AssetImage('asserts/fundoOf.jpg'), fit: BoxFit.cover),),child:SingleChildScrollView(
             padding: EdgeInsets.only(
                 top: 80.0, bottom: 20.0, left: 10.0, right: 10.0),
             child: Form(
@@ -37,7 +37,7 @@ class RegistrationScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.black, fontSize: 20.0),
                         ),
-                        color: Color(0XFF2196F3),
+                        color: Color(0xAA00FFFF),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25.0),
                           side: BorderSide(color: Colors.black),
@@ -49,7 +49,7 @@ class RegistrationScreen extends StatelessWidget {
               ),
             ),
           ),
-          backgroundColor: Color(0XFF2196F3),
+        ),
         ),
       ],
     );
