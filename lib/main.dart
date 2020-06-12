@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Splash Screen',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Splash Screen Flutter'),
+     ),
+      home: Container(child:MyHomePage(title: 'Splash Screen Flutter')),
     );
   }
 }
@@ -50,15 +50,15 @@ Widget _introScreen() {
         ),
         navigateAfterSeconds: HomeScreen(),
         loaderColor: Colors.transparent,
-      ),
-      Container(
+      ),Container(decoration: new BoxDecoration(image: new DecorationImage(image: AssetImage('asserts/fundoInit.jpg'), fit: BoxFit.cover)),
+      child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("asserts/logo.png"),
             fit: BoxFit.none,
           ),
         ),
-      ),
+      ),),
     ],
   );
 }

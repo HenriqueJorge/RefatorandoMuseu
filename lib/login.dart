@@ -19,15 +19,8 @@ class _HomeState extends State<ContaEntrada> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Image.asset(
-          "asserts/museu.jpg",
-          fit: BoxFit.cover,
-          height: 500.0,
-        ),
-        Scaffold(
-          body: SingleChildScrollView(
+    return  Scaffold(
+          body: Center(child:Container(height: 1000,decoration: new BoxDecoration(image: new DecorationImage(image: AssetImage('asserts/fundoOf.jpg'), fit: BoxFit.cover),),child:SingleChildScrollView(
             padding: EdgeInsets.all(10.0),
             child: Form(
               key: _formKey,
@@ -39,7 +32,7 @@ class _HomeState extends State<ContaEntrada> {
                         top: 30.0, bottom: 70.0, left: 30.0, right: 30.0),
                     child: Icon(
                       Icons.toys,
-                      size: 100.0,
+                      size: 150.0,
                     ),
                   ),
                   buildTextField("Usuário",controllerNome),
@@ -92,9 +85,8 @@ class _HomeState extends State<ContaEntrada> {
               ),
             ),
           ),
-          backgroundColor: Color(0XFF2196F3),
+          ),
         ),
-      ],
     );
   }
 }
